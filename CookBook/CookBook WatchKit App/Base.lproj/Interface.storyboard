@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch40"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <imageView width="48" height="48" alignment="center" image="logo" id="9JQ-fC-qmC"/>
+                        <label alignment="center" text="CookBook" id="T4G-xE-UWk">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                        </label>
+                        <button width="1" alignment="left" title="Next" id="EvK-Ro-UR2">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="0.70543307070000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="fXx-QD-C6B" kind="push" id="hZT-t0-Px6"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-16" y="-6"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="hQ9-nt-FkU">
+            <objects>
+                <controller id="fXx-QD-C6B" customClass="InterfaceController" customModule="CookBook_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="kbf-Xp-Ax1">
+                            <items>
+                                <tableRow identifier="tableid" id="jc0-F4-eUd" customClass="tableRow" customModule="CookBook_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="eBP-SR-D2s">
+                                        <items>
+                                            <label alignment="left" text="ICON" id="q2X-7F-0wk">
+                                                <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                            </label>
+                                            <label alignment="left" text="RecipeName" id="qWq-9V-weu"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="RecipeName" destination="qWq-9V-weu" id="aLy-wW-21L"/>
+                                        <outlet property="icon" destination="q2X-7F-0wk" id="AyV-tj-2eD"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="kbf-Xp-Ax1" id="Qzw-Xc-3bR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="246" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="96" height="96"/>
+    </resources>
+</document>
